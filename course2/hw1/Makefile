@@ -1,0 +1,12 @@
+all:mystring.o mysplit.o
+	gcc hw0101.c -o hw0101
+	gcc hw0102.c -o hw0102
+	gcc hw0103.c mystring.o -o hw0103
+	gcc hw0104.c mystring.o -o hw0104
+	gcc hw0105.c mystring.o mysplit.o -o hw0105
+	gcc hw0106.c -o hw0106
+%.o:%.c
+	gcc -c $< -o $@
+clean:
+	rm hw0101 hw0102 hw0103 hw0104 hw0105 hw0106 *.o
+
