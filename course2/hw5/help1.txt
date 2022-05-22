@@ -1,0 +1,9 @@
+Usage:
+    hw0501 [options]
+Options:
+ -b, --bytes         show output in bytes
+     --kilo          show output in kilobytes (default)
+     --mega          show output in megabytes
+ -s N, --seconds N   repeat printing every N seconds
+ -c N, --count N     repeat printing N times, then exit
+     --help     display this help and exit
