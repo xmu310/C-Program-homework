@@ -85,7 +85,7 @@ int main(int argc,char *argv[]){
 			fseek(fp,check?-hsz:0,SEEK_END);
 			fwrite(&u,hsz,1,fp);
 		}else if(opt=='c'){
-			if(u.c28.T&&!u.c28.z)nc=28;else nc=30;
+			if(*u.c28.T&&!*u.c28.z)nc=28;else nc=30;
 			if(narg>nc){printf("String length (%ld) beyond max length (%ld)!\n",narg,nc);continue;}
 			if(!check){printf("%s: No TAG! -> Generate TAG\n",argv[i]);memset(&u,0,hsz);strcpy(u.c28.h,"TAG");*u.c28.g=255;}
 			if(nc=28)strncpy(u.c28.c28,arg,nc28);
@@ -93,7 +93,7 @@ int main(int argc,char *argv[]){
 			fseek(fp,check?-hsz:0,SEEK_END);
 			fwrite(&u,hsz,1,fp);
 		}else if(opt=='T'){
-			if(u.c28.z){printf("Zero-byte is not zero!\n");continue;}
+			if(*u.c28.z){printf("Zero-byte is not zero!\n");continue;}
 			if(!check){printf("%s: No TAG! -> Generate TAG\n",argv[i]);memset(&u,0,hsz);strcpy(u.c28.h,"TAG");*u.c28.g=255;}
 			*u.c28.T=track;
 			fseek(fp,check?-hsz:0,SEEK_END);
