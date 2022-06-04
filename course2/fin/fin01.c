@@ -14,9 +14,9 @@ int main(int argc,char *argv[]){
 	uint8_t color[5][3];
 	while((c=getopt_long(argc,argv,"w:h:o:",optl,0))!=-1){
 		if(c=='w'){
-			if(sscanf(optarg,"%ld%c",&w,&cc)!=1||w<0){printf("width should be a positive number\n");return 0;}
+			if(sscanf(optarg,"%ld%c",&w,&cc)!=1||w<0||w>2000){printf("width should be 0-2000\n");return 0;}
 		}else if(c=='h'){
-			if(sscanf(optarg,"%ld%c",&h,&cc)!=1||h<0){printf("width should be a positive number\n");return 0;}
+			if(sscanf(optarg,"%ld%c",&h,&cc)!=1||h<0||h>2000){printf("width should be 0-2000\n");return 0;}
 		}else if(c=='o'){
 			strcpy(buf,optarg);
 		}else if(c!=0){
