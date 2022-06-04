@@ -38,7 +38,7 @@ int main(int argc,char *argv[]){
 	if(year[1]<year[0]||year[1]==year[0]&&month[1]<month[0]||year[1]==year[0]&&month[1]==month[0]&&day[1]<day[0]){printf("End date is earlier than start date!");return 0;}
 	if(help){
 		printf("Usage:\n");
-		printf("  ./fin01 [options]\n");
+		printf("  ./fin02 [options]\n");
 		printf("    -c: --country: the country name. default: Taiwan\n");
 		printf("    -s: --start MM-DD-YYYY: the start date. default: 01-02-2020\n");
 		printf("    -e: --end MM-DD-YYYY: the end date. default: 12-31-2021\n");
